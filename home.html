@@ -4,10 +4,38 @@
     <title>Sasha's Website</title>
 </head>
 
+<style>
+    .grid-container {
+        display: grid;
+    }
+
+    .grid-item {}
+
+</style>
+
 <body>
 
-    <h1>Bio</h1>
-    <p>
+    <div class="grid-container">
+        <div class="grid-item">1</div>        
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+
+    </div>
+
+
+
+
+    <!---OLD STUFF-->
+    <div>
+        <h1>Sasha Persaud</h1>
+    </div>
+
+    <div>
+        <h2>About Me</h2>
+        <p>
         Hello! I'm Sasha Persaud, a passionate software engineer 
         with a strong foundation in both software development 
         and geographic information systems (GIS). I recently 
@@ -17,8 +45,8 @@
         ranging from Python and JavaScript to AWS and ArcGIS, 
         I am dedicated to creating innovative solutions that 
         bridge the gap between technology and real-world challenges.
-    </p>
-    <p>
+        </p>
+        <p>
         Throughout my academic journey and professional 
         experiences, I've had the opportunity to work on 
         a variety of impactful projects. From building a 
@@ -26,21 +54,42 @@
         at Voltserver Inc. to leading a team of interns at 
         TRC Companies, I thrive in collaborative environments 
         where I can both contribute and learn.
-    </p>
-    <p>
+        </p>
+        <p>
         In addition to my technical expertise, I am driven 
         by a commitment to continuous learning and adaptability. 
         Whether it's improving data processing scripts, 
         developing embedded systems, or conducting GIS research
         in Rwanda, I am always eager to take on new challenges 
         and grow as a professional.
-    </p>
-    <p>
+        </p>
+        <p>
         I am open to new opportunities and willing to 
         relocate for the right role. If you're looking for 
         a software engineer who is not only technically 
         proficient but also passionate about making a 
         difference, I'd love to connect!
-    </p>
+        </p>
+    </div>
+    
+    <h2>Co-ops/Internships</h2>
+    <div class="internshipdiv">
+        <div style="background-color: rgb(47, 255, 61);">
+            <h3>Voltserver Inc</h3>
+            <p>Description of Modbus server project</p>
+        </div>
+
+        <div style="background-color: rgb(50, 175, 237);">
+            <h3>TRC Systems</h3>
+            <p>Description of KML export and QGIS scripting project</p>
+        </div>
+
+        <div style="background-color: darkblue; color: white;">
+            <h3>Poseidon Systems, LLC</h3>
+            <p>Description of desktop app to configure multiple sensors over Modbus and bootloader algo improvements.</p>
+        </div>
+    </div>
+
 </body>
+
 </html>
