@@ -30,21 +30,80 @@
     }
 
     .grid-container > div {
-        background-color: rgba(125, 252, 252, 0.8);
+        /* background-color: rgba(125, 252, 252, 0.8); */
         text-align: left;
         padding: 20px 0;
         font-size: 30px;
     }
 
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    li {
+        float: right;
+    }
+
+    a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+
+    .active {
+        background-color: pink;
+    }
+
+    .header-name {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    img {
+        width: 400px;
+        height: 500px;
+        object-fit: contain;
+    }
 </style>
 
 <body>
 
     <div class="grid-container">
-        <div class="item1">header</div>        
+        <div class="item1">
+            <div>
+                <ul>
+                    <li class="header-name">SASHA PERSAUD</li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href=projects.html">projects</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a class="active" href="home.html">home</a></li>
+
+                </ul>
+            </div>
+        </div>       
+
         <div class="item2">tagline</div>
         <div class="item3">skills</div>
-        <div class="item4">photo</div>
+        <div class="item4">
+            <img src="grad_sipping_mug_at_diner.jpg" alt="girl in diner">
+        </div>
         <div class="item5">experience</div>
         <div class="item6">about</div>
         <div class="item7">contact</div>
