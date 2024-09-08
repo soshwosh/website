@@ -5,31 +5,56 @@
 </head>
 
 <style>
+    .item1 { grid-area: header; }
+    .item2 { grid-area: tagline; }
+    .item3 { grid-area: skills; }
+    .item4 { grid-area: photo; }
+    .item5 { grid-area: experience; }
+    .item6 { grid-area: about; }
+    .item7 { grid-area: contact; }
+
     .grid-container {
         display: grid;
+        height: 100vh;
+        width:100vh;
+        gap: 10;
+        grid-template-areas: 
+            'header header header header header header'
+            'tagline tagline skills photo photo experience'
+            'tagline tagline skills photo photo experience'
+            'about about about contact contact experience'
+            'about about about contact contact experience'
+            'about about about contact contact experience';
+        gap: 10px;
+        padding: 10px;
     }
 
-    .grid-item {}
+    .grid-container > div {
+        background-color: rgba(125, 252, 252, 0.8);
+        text-align: left;
+        padding: 20px 0;
+        font-size: 30px;
+    }
 
 </style>
 
 <body>
 
     <div class="grid-container">
-        <div class="grid-item">1</div>        
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-
+        <div class="item1">header</div>        
+        <div class="item2">tagline</div>
+        <div class="item3">skills</div>
+        <div class="item4">photo</div>
+        <div class="item5">experience</div>
+        <div class="item6">about</div>
+        <div class="item7">contact</div>
     </div>
 
 
 
 
     <!---OLD STUFF-->
-    <div>
+    <!-- <div>
         <h1>Sasha Persaud</h1>
     </div>
 
@@ -88,7 +113,7 @@
             <h3>Poseidon Systems, LLC</h3>
             <p>Description of desktop app to configure multiple sensors over Modbus and bootloader algo improvements.</p>
         </div>
-    </div>
+    </div> -->
 
 </body>
 
