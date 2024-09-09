@@ -2,34 +2,50 @@
 <html>
 <head>
     <title>Sasha's Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <style>
-    .bentobox {
-        border-radius: 25%;
-
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #A93F55;
+    }
+    
+    .header { grid-area: header; }
+    .tagline { 
+        grid-area: tagline; 
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    .skills { 
+        grid-area: skills; 
+        padding: 10%;
     }
 
-    .item1 { grid-area: header; }
-    .item2 { grid-area: tagline; }
-    .item3 { grid-area: skills; }
-    .item4 { grid-area: photo; }
-    .item5 { grid-area: experience; }
-    .item6 { grid-area: about; }
-    .item7 { grid-area: contact; }
+    .photo { 
+        grid-area: photo;     
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    .experience { grid-area: experience; }
+    .about { grid-area: about; }
+    .contact { grid-area: contact; }
 
     .grid-container {
         display: grid;
-        height: 100vh;
-        width:100vh;
+        height: 100%;
+        width:100%;
         gap: 10;
         grid-template-areas: 
             'header header header header header header'
-            'tagline tagline skills photo photo experience'
-            'tagline tagline skills photo photo experience'
-            'about about about contact contact experience'
-            'about about about contact contact experience'
-            'about about about contact contact experience';
+            'tagline tagline skills photo experience experience'
+            'tagline tagline skills photo experience experience'
+            'about about about contact experience experience'
+            'about about about contact experience experience'
+            'about about about contact experience experience';
         gap: 10px;
         padding: 10px;
     }
@@ -37,18 +53,18 @@
     .grid-container > div {
         /* background-color: rgba(125, 252, 252, 0.8); */
         text-align: left;
-        padding: 20px 0;
+        padding: 20px;
         font-size: 30px;
     }
 
     .grid-item {
-            background-color: #4CAF50;
+            background-color: #F2C4BA;
             padding: 20px;
             text-align: center;
             border-radius: 15px; /* Rounded edges */
         }
 
-    ul {
+    .nav {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -56,10 +72,23 @@
         background-color: #333;
         position: fixed;
         top: 0;
+        left: 0;
         width: 100%;
     }
 
-    li {
+    .skill-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .skill-list > li {
+        margin: 0;
+        display:block
+    }
+
+    .nav-item {
         float: right;
     }
 
@@ -93,99 +122,97 @@
         height: 900px;
         object-fit: contain;
     }
+
+    .logo {
+        max-width: 20%;
+        height:auto;
+    }
 </style>
 
 <body>
 
     <div class="grid-container">
-        <div class="grid-item item1">
-            <div>
-                <ul>
-                    <li class="header-name">SASHA PERSAUD</li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href=projects.html">projects</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a class="active" href="home.html">home</a></li>
-
-                </ul>
-            </div>
+        <div class="grid-item header">
+            <ul class="nav">
+                <li class="header-name">SASHA PERSAUD</li>
+                <li class="nav-item"><a href="blog.html">blog</a></li>
+                <li class="nav-item"><a href=projects.html">projects</a></li>
+                <li class="nav-item"><a href="about.html">about</a></li>
+                <li class="nav-item"><a class="active" href="home.html">home</a></li>
+            </ul>
         </div>       
 
-        <div class="grid-item item2">tagline</div>
-        <div class="grid-item item3">skills</div>
-        <div class="grid-item item4 bentobox">
-            <img src="grad_sipping_mug_at_diner.jpg" alt="girl in diner">
+        <div class="grid-item tagline">
+            <h2 style="text-align: right;">eager to design, develop, and deploy – a new grad ready for software engineering innovation!</h2>
         </div>
-        <div class="grid-item item5">experience</div>
-        <div class="grid-item item6">about</div>
-        <div class="grid-item item7">contact</div>
-    </div>
 
+        <div class="grid-item skills">
+            <ul class="skill-list">
+                <img class="logo" src="python-logo-transparent_2023e8.png">
+                <img class="logo" src="git-icon-logo-png-transparent.png">
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>SQL(MySQL, PostgreSQL)</li>
+                    <li>Javascript</li>
+                    <li>HTML & CSS</li>
+                    <li>Git</li>
+                    <li>Agile (SCRUM, Kanban)</li>
+                    <li>Waterfall</li>
+                    <li>Amazon Web Services (AWS)</li>
+                    <li>Testing and Validation</li>
+                    <li>Unit Testing (JUnit, PyTest)</li>
+                    <li>GIS (ArcGIS Pro, QGIS)</li>
+                </ul>
+            </ul>
+            
+        </div>
+        
+        <img class="photo" src="grad_sipping_mug_at_diner.jpg" alt="girl in diner">
 
-
-
-    <!---OLD STUFF-->
-    <!-- <div>
-        <h1>Sasha Persaud</h1>
-    </div>
-
-    <div>
-        <h2>About Me</h2>
-        <p>
-        Hello! I'm Sasha Persaud, a passionate software engineer 
-        with a strong foundation in both software development 
-        and geographic information systems (GIS). I recently 
-        graduated from the Rochester Institute of Technology 
-        with a Bachelor of Science in Software Engineering and 
-        a minor in GIS. With a diverse set of technical skills 
-        ranging from Python and JavaScript to AWS and ArcGIS, 
-        I am dedicated to creating innovative solutions that 
-        bridge the gap between technology and real-world challenges.
-        </p>
-        <p>
-        Throughout my academic journey and professional 
-        experiences, I've had the opportunity to work on 
-        a variety of impactful projects. From building a 
-        Modbus server for digital electricity transmitters 
-        at Voltserver Inc. to leading a team of interns at 
-        TRC Companies, I thrive in collaborative environments 
-        where I can both contribute and learn.
-        </p>
-        <p>
-        In addition to my technical expertise, I am driven 
-        by a commitment to continuous learning and adaptability. 
-        Whether it's improving data processing scripts, 
-        developing embedded systems, or conducting GIS research
-        in Rwanda, I am always eager to take on new challenges 
-        and grow as a professional.
-        </p>
-        <p>
-        I am open to new opportunities and willing to 
-        relocate for the right role. If you're looking for 
-        a software engineer who is not only technically 
-        proficient but also passionate about making a 
-        difference, I'd love to connect!
-        </p>
-    </div>
+        <div class="grid-item experience">
+            <div>
+                <h3>Voltserver Inc</h3>
+                <p>Description of Modbus server project</p>
+            </div>
     
-    <h2>Co-ops/Internships</h2>
-    <div class="internshipdiv">
-        <div style="background-color: rgb(47, 255, 61);">
-            <h3>Voltserver Inc</h3>
-            <p>Description of Modbus server project</p>
+            <div>
+                <h3>TRC Systems</h3>
+                <p>Description of KML export and QGIS scripting project</p>
+            </div>
+    
+            <div>
+                <h3>Poseidon Systems, LLC</h3>
+                <p>Description of desktop app to configure multiple sensors over Modbus and bootloader algo improvements.</p>
+            </div>
         </div>
 
-        <div style="background-color: rgb(50, 175, 237);">
-            <h3>TRC Systems</h3>
-            <p>Description of KML export and QGIS scripting project</p>
-        </div>
+        <div class="grid-item about">          
+            <p>
+                Hello! I'm Sasha Persaud, a dedicated software engineer with a B.S. 
+                in Software Engineering and a GIS minor from the Rochester Institute of Technology. 
+                My skills span Python, JavaScript, AWS, and ArcGIS, and I’m committed to creating
+                solutions that address real-world challenges.
+            </p>
 
-        <div style="background-color: darkblue; color: white;">
-            <h3>Poseidon Systems, LLC</h3>
-            <p>Description of desktop app to configure multiple sensors over Modbus and bootloader algo improvements.</p>
-        </div>
-    </div> -->
+            <p>
+                I've worked on impactful projects such as building a Modbus server at Voltserver Inc. 
+                and leading interns at TRC Companies. I thrive in collaborative settings and am always 
+                eager to learn and adapt.
+            </p>
+            
+            <p>
+                I'm open to new opportunities and willing to relocate. 
+                If you're seeking a skilled and passionate software engineer, I'd love to connect!
+            </p>
 
+        </div>
+        <div class="grid-item contact">
+            <img class="logo" src="icons8-linkedin-80.png">
+            <img class="logo" src="icons8-github-64.png">
+
+        </div>
+    </div>
 </body>
 
 </html>
