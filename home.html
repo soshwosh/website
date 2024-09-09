@@ -5,6 +5,11 @@
 </head>
 
 <style>
+    .bentobox {
+        border-radius: 25%;
+
+    }
+
     .item1 { grid-area: header; }
     .item2 { grid-area: tagline; }
     .item3 { grid-area: skills; }
@@ -35,6 +40,13 @@
         padding: 20px 0;
         font-size: 30px;
     }
+
+    .grid-item {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px; /* Rounded edges */
+        }
 
     ul {
         list-style-type: none;
@@ -77,8 +89,8 @@
     }
 
     img {
-        width: 400px;
-        height: 500px;
+        width: 800px;
+        height: 900px;
         object-fit: contain;
     }
 </style>
@@ -86,7 +98,7 @@
 <body>
 
     <div class="grid-container">
-        <div class="item1">
+        <div class="grid-item item1">
             <div>
                 <ul>
                     <li class="header-name">SASHA PERSAUD</li>
@@ -99,14 +111,14 @@
             </div>
         </div>       
 
-        <div class="item2">tagline</div>
-        <div class="item3">skills</div>
-        <div class="item4">
+        <div class="grid-item item2">tagline</div>
+        <div class="grid-item item3">skills</div>
+        <div class="grid-item item4 bentobox">
             <img src="grad_sipping_mug_at_diner.jpg" alt="girl in diner">
         </div>
-        <div class="item5">experience</div>
-        <div class="item6">about</div>
-        <div class="item7">contact</div>
+        <div class="grid-item item5">experience</div>
+        <div class="grid-item item6">about</div>
+        <div class="grid-item item7">contact</div>
     </div>
 
 
