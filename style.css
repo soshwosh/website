@@ -1,20 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing:border-box;
     text-decoration: none;
     scroll-behavior: smooth;
-    font-family: "Poppins";    
+    font-family: 'Poppins', sans-serif;    
 }
 :root {
     --bg-color: #080808;
     --second-bg-color: #101010;
     --text-color: white;
-    --main-color: #F9B2AC;
-    --secondary-color: #FFCB63;
-    --tertiary-color: #54BFD0;
+    --main-pink: #ff70a6;
+    --main-yellow: #ffbe0b;
+    --main-blue: #4cc9f0;
 }
 html {
     font-size: 60%;
     overflow-x: hidden;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--main-pink);
+    display: none;
+}
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+span {
+    background: linear-gradient(
+        90deg,
+        var(--main-yellow) 10%,
+        var(--main-pink) 100%
+    );
+    background-clip: text;
+    color: transparent;
+}
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--main-pink);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover {
+    color: var(--main-pink);
+    border-bottom: 3px solid var(--main-pink);
+}
+.gradient-btn {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background: linear-gradient(
+        90deg,
+        var(--main-pink) 10%,
+        var(--main-blue) 100%
+    );
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: white;
+    border: none;
+    text-wrap: nowrap;
+}
+.gradient-btn:hover {
+    transform: scale(1.1);
 }
