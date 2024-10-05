@@ -231,3 +231,59 @@ section {
     background-color: var(--bg-color);
 }
 
+.heading {
+    text-align: center;
+    font-size: 7rem;
+    margin: 5rem 0;
+}
+.skills {
+    background-color: var(--bg-color);
+    color: black;
+}
+.skills h2 {
+    color: var(--text-color);
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 2.5rem;
+}
+.skill-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-blue);
+    height: 600px;
+    border-radius: 3rem;
+    cursor:pointer;
+    border: 5px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+.skill-box:hover {
+    background: var(--second-bg-color);
+    color: var(--main-blue);
+    border: 5px solid var(--main-blue);
+    transform: scale(1.03);
+}
+.skill-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+.skill-info h4 {
+    font-size: 4rem;
+    margin: 2rem;
+    font-weight: 800;
+}
+.skill-info p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.7rem;
+}
+.skill-info i {
+    font-size: 8rem;
+}
