@@ -6,14 +6,18 @@
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("YdaYcMFeOrs78RPnt"); 
+        })();
+    </script>
 </head>
 <body>
     <header class="header">
         <a href="#home" class="logo">
             Sasha <span>Persaud</span>
         </a>
-
-        <i class="bx bx-menu" id="menu-icon"></i>
 
         <nav class="navbar">
             <a href="#home">Home</a>
@@ -23,29 +27,32 @@
             <a href="#contact">Contact</a>
         </nav>
 
-        <button class="gradient-btn">Contact Me</button>
+        <a href="#contact">
+            <button class="gradient-btn">Contact Me</button>
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
     </header>
 
     <section class="home" id="home">
         <div class="home-content">
             <h1>Hi, I'm <span>Sasha!</span></h1>
             <h3>A new grad looking for an entry-level role in <span>web development</span> and <span>cloud systems</span>.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate inventore numquam esse dignissimos iste illum unde explicabo rem facilis similique repellat quam, voluptatum dicta et. In culpa deleniti iure impedit?</p>
 
             <div class="social-icons">
-                <a href="#">
+                <a href="#" class="github">
                     <i class="bx bxl-github"></i>
                 </a>
-                <a href="#">
+                <a href="#" class="linkedin">
                     <i class="bx bxl-linkedin-square"></i>
                 </a>
-                <a href="#">
+                <a href="#" class="instagram">
                     <i class="bx bxl-instagram-alt"></i>
                 </a>
             </div>
 
             <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
+                <!-- <a href="#" class="btn">Hire</a> -->
                 <a href="#contact" class="btn">Contact</a>
             </div>
         </div>
@@ -62,8 +69,8 @@
 
         <div class="about-content">
             <h2>About <span>Me</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus minus commodi! Ratione necessitatibus mollitia fuga dolorum odit nihil ipsam, perferendis vitae voluptatibus, quidem velit repellat quibusdam atque! Similique, sequi!</p>
-            <a href="#" class="btn">Read More</a>
+            <p>I'm a software engineering graduate from Rochester Institute of Technology with a minor in geographic information systems (GIS). I have a passion for products with social impact, and am drawn to companies that enable their developers to feel that impact, as well a sense of ownership over their contributions. My experience spans web development, cloud systems, and embedded software, having worked on projects ranging from TypeScript Modbus servers to automated Python workflows. With a solid background in Python, JavaScript, React, AWS, and data analysis using ArcGIS, I am always seeking opportunities to create impactful software solutions. Whether it's optimizing processes or building scalable web applications, I hope to continue to grow my skills delivering efficient, high-quality results.</p>
+            <a href="#projects" class="btn">Read More</a>
         </div>
     </section>
 
@@ -73,19 +80,27 @@
         <div class="skills-container">
             <div class="skill-box">
                 <div class="skill-info">
-                    <i class="bx bxl-figma"></i>
+                    <i class="bx bx-code"></i>
                     <h4>Languages</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus doloremque deleniti pariatur quod vitae architecto quae magni ullam quas, aliquid itaque. Labore obcaecati dignissimos, optio corporis tempora ea ut dolor.</p>
+                    <p>Python, Java, Javascript/Typescript, C, MySQL, PostgreSQL</p>
                 </div>
             </div>
             
             <div class="skill-box">
                 <div class="skill-info">
-                    <i class="bx bx-code"></i>
+                    <i class="bx bx-git-pull-request"></i>
                     <h4>Tools & Frameworks</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus doloremque deleniti pariatur quod vitae architecto quae magni ullam quas, aliquid itaque. Labore obcaecati dignissimos, optio corporis tempora ea ut dolor.</p>
+                    <p>Git & Github, Github CI/CD, Flask, React, Express, Postman, AWS, ESRI, VSCode</p>
                 </div>
-            </div>  
+            </div>
+            
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="bx bx-task-x"></i>
+                    <h4>Project & Product Management</h4>
+                    <p>Agile (SCRUM, Kanban), Sprint Planning & Retrospectives, Waterfall, Test-Driven Development, JIRA, Github Projects</p>
+                </div>
+            </div> 
         </div>
     </section>
 
@@ -94,16 +109,15 @@
 
         <div class="projects-box">
             <div class="project-card">
-                <img src="" alt="">
+                <img src="images/NewsArticleSentimentAnalysisApp_Design.png" alt="">
 
-                <h3>Project 1</h3>
+                <h3>News Article Sentiment Analysis App</h3>
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt, tempore eos ut voluptatum, fuga quae similique illo consequatur dolore ducimus molestiae cumque consequuntur odit sit cupiditate totam, non saepe.</p>
+                <p>A web application that uses AWS technologies and the NewsData.io API to perform sentiment analysis on news topics. Users can view sentiment analysis results for a default or personalized list of topics, or search for specific news topics, helping them gain insights into the emotional tone of current events. I developed the serverless backend using AWS API Gateway & Lambdas for an Amplify-hosted React app, and wrote Terraform files to build/destroy AWS resources.</p>
 
-                <div class="btn">View in Github</div>
+                <div class="btn aws_sent_analysis_news">View in Github</div>
             </div>
-
-            <div class="project-card">
+            <!-- <div class="project-card">
                 <img src="" alt="">
 
                 <h3>Project 2</h3>
@@ -151,7 +165,7 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt, tempore eos ut voluptatum, fuga quae similique illo consequatur dolore ducimus molestiae cumque consequuntur odit sit cupiditate totam, non saepe.</p>
 
                 <div class="btn">View in Github</div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -159,24 +173,24 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#">
+        <form action="#" id="contact-form">
 
             <div class="input-group1">
 
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Full Name" id="name">
+                    <input type="email" placeholder="Email" id="email">
                 </div>
 
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="number" placeholder="Phone Number" id="phone">
+                    <input type="text" placeholder="Subject" id="subject">
                 </div>
 
             </div>
 
             <div class="input-group2">
-                <textarea name="" id="" placeholder="Your Message" cols="30" rows="10"></textarea>
+                <textarea name="" placeholder="Your Message" cols="30" rows="10" id="message"></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
             
@@ -185,13 +199,13 @@
 
     <footer class="footer">
         <div class="social-icons">
-            <a href="#">
+            <a href="#" class="github">
                 <i class="bx bxl-github"></i>
             </a>
-            <a href="#">
+            <a href="#" class="linkedin">
                 <i class="bx bxl-linkedin-square"></i>
             </a>
-            <a href="#">
+            <a href="#" class="instagram">
                 <i class="bx bxl-instagram-alt"></i>
             </a>
         </div>
