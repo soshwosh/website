@@ -134,7 +134,7 @@ section {
                 0 0 50px var(--main-pink),
                 0 0 100px var(--main-pink)
 }
-.social-icons a{
+.social-icons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -388,12 +388,13 @@ section {
 @media(max-width:1285px) {
     #menu-icon{
         display: block;
+        position: right;
     }
     .navbar{
         position: absolute;
         top: 100%;
         right: 0;
-        width: 50%;
+        width: 25%;
         padding: 1rem 3rem;
         background: rgba(0, 0, 0, 0.8);
         border-bottom-left-radius: 2rem;
