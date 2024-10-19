@@ -24,7 +24,7 @@ linkedinButtons.forEach(button => {
 const instagramButtons = document.querySelectorAll('.instagram');
 instagramButtons.forEach(button => {
     button.addEventListener('click', function() {
-        window.location.href = "https://www.instagram.com/sosh.goes.to.ghc/";
+        window.location.href = "https://www.instagram.com/sosh.gets.a.tech.job/";
     });
 });
 
