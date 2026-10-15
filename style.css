@@ -1,7 +1,10 @@
 * {
   --fern: #627A37ff;
   --crimson-violet: #5D043Cff;
+  --crimson-violet-10: rgb(158, 6, 103);
   --blackberry-cream: #5F325Dff;
+  --blackberry-cream-10: rgb(171, 91, 167);
+
   --chestnut: #793427ff;
   --blue-slate: #47707Aff;
   --deep-navy: #132155ff;
@@ -10,5 +13,81 @@
   background: black;
   color: var(--blue-slate, white);
   font-family:'Arial Narrow', Arial, sans-serif;
+
+  a {
+    text-decoration: none;
+  }
 }
+
+h1 {
+  color: var(--blue-slate);
+}
+
+h2 {
+  color: var(--crimson-violet);
+}
+
+p { 
+  color: var(--crimson-violet-10);
+}
+
+main {
+  h1 {
+    color: var(--blackberry-cream);
+  }
+
+  h2 {
+    color: var(--blackberry-cream);
+  }
+
+  p { 
+    color: var(--blackberry-cream-10);
+  }
+}
+
+
+.crumbs, .footer {
+  display: flex;
+  padding-left: 0;
+}
+
+.crumb, .footer-item {
+  list-style: none;
+  padding-right: 2%;
+
+  a:hover {
+    color: var(--olive);
+  }
+}
+
+/* Bookshelf page */
+.shelves {
+  border-color: rgb(161, 168, 196);
+}
+
+.shelf {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: rgb(136, 3, 70)
+  }
+}
+
+.books {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-items: center;
+}
+
+.book:hover {
+  transform: translateY(-10px);
+}
+
+.book > img {
+  max-width: 40px;
+}
+
+
 
